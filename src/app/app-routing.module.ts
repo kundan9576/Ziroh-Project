@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'help', component: HelpComponent },
   { path: 'myprofile', component: MyProfileComponent },
-  { path: 'secureprofile', component: SecureFilesComponent },
+  { path: 'securefiles', component: SecureFilesComponent },
   { path: '**', component: SecurePhotosComponent }
 
 ];
