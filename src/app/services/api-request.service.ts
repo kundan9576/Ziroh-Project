@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable, Subject, EMPTY } from 'rxjs';
+import { Observable, Subject, EMPTY, BehaviorSubject } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -47,5 +47,8 @@ export class ApiRequestService {
       catchError( async (error) =>  await this.handleError(error) )
     );
   }
+
+
+  navOpen = new BehaviorSubject <any>(1);
 
 }

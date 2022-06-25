@@ -17,6 +17,8 @@ export class SecurePhotosComponent implements OnInit {
     this._ApiRequestService.requestPhotoApi().subscribe(res => {
       this.photosList = res;
     });
+
+    this._ApiRequestService.navOpen.next(1);
   }
 
   deleteImage( index ){

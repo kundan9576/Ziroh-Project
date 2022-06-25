@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiRequestService } from 'src/app/services/api-request.service';
 
 @Component({
   selector: 'app-about-us',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _dataService : ApiRequestService ) { }
 
   ngOnInit(): void {
+      this._dataService.navOpen.next(3);
   }
 
 }

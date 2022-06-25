@@ -14,7 +14,9 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'help', component: HelpComponent },
   { path: 'myprofile', component: MyProfileComponent },
-  { path: 'secureprofile', component: SecureFilesComponent }
+  { path: 'secureprofile', component: SecureFilesComponent },
+  { path: '**', component: SecurePhotosComponent }
+
 ];
 
 @NgModule({

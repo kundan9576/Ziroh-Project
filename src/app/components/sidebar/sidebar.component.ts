@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiRequestService } from 'src/app/services/api-request.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,7 +14,11 @@ export class SidebarComponent implements OnInit {
   }
   index:number = 1;
 
-  constructor( private _router: Router ) { }
+  constructor( private _router: Router, private _dataService: ApiRequestService ) {
+    this._dataService.navOpen.subscribe(res => {
+      this.index = res;
+    });
+  }
 
   ngOnInit(): void {
   }
