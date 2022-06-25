@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,13 +13,14 @@ export class SidebarComponent implements OnInit {
   }
   index:number = 1;
 
-  constructor() { }
+  constructor( private _router: Router ) { }
 
   ngOnInit(): void {
   }
 
-  tabSelected(value): void {
+  tabSelected(value, routeparams ): void {
     this.index = value;
+    this._router.navigate([routeparams]);
   }
 
 }
